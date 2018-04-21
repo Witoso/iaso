@@ -4,7 +4,7 @@ import os
 
 def test_no_file():
     with pytest.raises(FileNotFoundError):
-        iaso.read_structure_file()
+        iaso.read_iaso_file()
 
 @pytest.fixture
 def create_file():
@@ -18,5 +18,6 @@ def create_file():
         pass
 
 def test_file(create_file):
-    assert iaso.read_structure_file() == "this is a file"
+    assert iaso.read_iaso_file() == "this is a file"
+
 
